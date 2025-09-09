@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
+html,
+body,
+#root,
+.app,
+.content {
+  font-family: "Source Sance Pro", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.search-button-style {
+  background-color: blue !important;
+  color: white;
+  height: 53px !important;
+}
+
+.search-button-style:hover {
+  text-decoration: underline !important;
+}
+
+.AddModallbtns {
+  background-color: white !important;
+  color: black !important;
+}
+
+.AddModallbtns:hover {
+  text-decoration: underline !important;
+  text-decoration-color: burlywood !important;
+}
+
+.icon-black {
+  color: black !important;
+}
+
+/* .EditIcon:hover {
+  color: rgba(255, 0, 0, 0.5) !important;
+  font-size: small !important;
+} */
+
+.Button-class {
+  background-color: "blue !important";
+  height: "60px !important";
+}
+
+.Accordion-drop-down-menu-Typography {
+  padding-left: 13px !important;
+  color: "black";
+}
+
+.btn-custom-width {
+  width: 90px;
+}
+
+@media (max-width: 767px) {
+  /* For mobile screens, reduce the width of buttons */
+  .btn-custom-width {
+    max-width: 90%; /* Takes up full width on smaller screens */
+  }
+}

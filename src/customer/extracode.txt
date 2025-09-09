@@ -1,0 +1,383 @@
+<div className="container-fluid p-4 mb-5 rounded shadow bg-white">
+        <h4 className="mb-3"> Wood </h4>
+          <div className="row">
+
+            <div className="col-12 col-sm-6 com-md-6 col-lg-4 col-xl-3 mb-3">
+              <div className="p-2">
+                <h6 className="text-center"> Teak Wood </h6>
+                <div className="img-container">
+                  <img src="/tree4.jpg" className="img-fluid rounded"/>
+                </div>
+                <button className="btn btn-success w-100 seeallbtn"> See All Products </button>
+              </div>
+            </div>
+
+            <div className="col-12 col-sm-6 com-md-6 col-lg-4 col-xl-3 mb-3">
+              <div className="p-2">
+              <h6 className="text-center"> Rose Wood </h6>
+                <div className="img-container">
+                  <img src="/tree2.jpg" className="img-fluid rounded"/>
+                </div>
+                <button className="btn btn-success w-100 seeallbtn"> See All Products </button>
+              </div>
+            </div>
+
+            <div className="col-12 col-sm-6 com-md-6 col-lg-4 col-xl-3 mb-3">
+              <div className="p-2">
+              <h6 className="text-center"> Ebony Wood </h6>
+                <div className="img-container">
+                  <img src="/tree3.jpg" className="img-fluid rounded"/>
+                </div>
+                <button className="btn btn-success w-100 seeallbtn"> See All Products </button>
+              </div>
+            </div>
+
+            <div className="col-12 col-sm-6 com-md-6 col-lg-4 col-xl-3 mb-3">
+              <div className="p-2">
+              <h6 className="text-center"> Mahogany Wood </h6>
+                <div className="img-container">
+                  <img src="/tree4.jpg" className="img-fluid rounded"/>
+                </div>
+                <button className="btn btn-success w-100 seeallbtn"> See All Products </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+
+        <nav className="navbar navbar-expand-sm navbar-background">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-6 col-md-2">
+              <a className="navbar-brand ms-3" href="/">
+                <img src="./TimberLogo-removebg.png" height={100} />
+              </a>
+            </div>
+            <div className="col-6 col-md-3 mt-3">
+              <img src="/iipm-preview.png" className="img-fluid" />
+            </div>
+            <div className="col-6 col-md-2 mt-2">
+              <img src="/msme-logo.png" height={100} />
+            </div>
+            <div className="col-6 col-md-5">
+              <p className="fs-2 mt-3 brand-name"> MULTIPLEX FOREST FACTREE </p>
+            </div>
+          </div>
+        </div>
+        
+      </nav>
+
+
+
+      allcategories.categories.map((category, catindex)=>{
+            return(
+              <div key={catindex} className="container-fluid p-4 mb-5 rounded shadow bg-white">
+              <h4 className="mb-3"> {category.name} </h4>
+              <div className="row">
+              {
+                  category.subcategories.map((subcategory, subindex)=>{
+                    return(
+                      <div key={subindex} className="col-12 col-sm-6 com-md-6 col-lg-4 col-xl-3 mb-3">
+                      <div className="p-2">
+                        <h6 className="text-center"> {subcategory.sname} </h6>
+                        <div className="img-container prod-img">
+                          <Link to="/allproducts"><img src={subcategory.simage} alt={subcategory.sname} className="img-fluid rounded"/></Link>
+                        </div>
+                        <Link className="btn btn-success w-100 seeallbtn" to="/allproducts"> See All Products </Link>
+                      </div>
+                    </div>
+                    )
+                  })
+                }
+              </div>
+                
+              </div>
+            )
+          })
+
+
+
+
+          <div key={prodIndex} className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
+                    <div className="p-2">
+                      <h6 className="text-center">{product.name}</h6>
+                      <div className="img-container prod-img">
+                        <Link to="/allproducts">
+                          <img
+                            src={product.image}
+                            alt={product.name}
+                            className="img-fluid rounded"
+                          />
+                        </Link>
+                      </div>
+                      <Link className="btn btn-success w-100 seeallbtn" to="/allproducts">
+                        See All Products
+                      </Link>
+                    </div>
+                  </div>
+
+
+
+
+
+
+        <div className="container-fluid p-4 mb-5 rounded shadow bg-white">
+        <h4 className="mb-3"> Plants </h4>
+          <div className="row">
+
+            <div className="col-12 col-sm-6 com-md-6 col-lg-4 col-xl-3 mb-3">
+              <div className="p-2">
+                <h6 className="text-center"> Areca Palm </h6>
+                <div className="img-container">
+                  <img src="/plant1.jpg" className="img-fluid rounded"/>
+                </div>
+                <button className="btn btn-success w-100 seeallbtn"> See All Products </button>
+              </div>
+            </div>
+
+            <div className="col-12 col-sm-6 com-md-6 col-lg-4 col-xl-3 mb-3">
+              <div className="p-2">
+              <h6 className="text-center"> Tulsi </h6>
+                <div className="img-container">
+                  <img src="/plant2.jpg" className="img-fluid rounded"/>
+                </div>
+                <button className="btn btn-success w-100 seeallbtn"> See All Products </button>
+              </div>
+            </div>
+
+            <div className="col-12 col-sm-6 com-md-6 col-lg-4 col-xl-3 mb-3">
+              <div className="p-2">
+              <h6 className="text-center"> Curry Leaf </h6>
+                <div className="img-container">
+                  <img src="/plant3.jpg" className="img-fluid rounded"/>
+                </div>
+                <button className="btn btn-success w-100 seeallbtn"> See All Products </button>
+              </div>
+            </div>
+
+            <div className="col-12 col-sm-6 com-md-6 col-lg-4 col-xl-3 mb-3">
+              <div className="p-2">
+              <h6 className="text-center"> Coconut </h6>
+                <div className="img-container">
+                  <img src="/plant4.jpg" className="img-fluid rounded"/>
+                </div>
+                <button className="btn btn-success w-100 seeallbtn"> See All Products </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+        <div className="container-fluid p-4 mb-5 rounded shadow bg-white">
+        <h4 className="mb-3"> Seeds </h4>
+          <div className="row">
+
+            <div className="col-12 col-sm-6 com-md-6 col-lg-4 col-xl-3 mb-3">
+              <div className="p-2">
+                <h6 className="text-center"> Paddy </h6>
+                <div className="img-container">
+                  <img src="/seed1.jpg" className="img-fluid rounded"/>
+                </div>
+                <button className="btn btn-success w-100 seeallbtn"> See All Products </button>
+              </div>
+            </div>
+
+            <div className="col-12 col-sm-6 com-md-6 col-lg-4 col-xl-3 mb-3">
+              <div className="p-2">
+              <h6 className="text-center"> Groundnut </h6>
+                <div className="img-container">
+                  <img src="/seed2.jpg" className="img-fluid rounded"/>
+                </div>
+                <button className="btn btn-success w-100 seeallbtn"> See All Products </button>
+              </div>
+            </div>
+
+            <div className="col-12 col-sm-6 com-md-6 col-lg-4 col-xl-3 mb-3">
+              <div className="p-2">
+              <h6 className="text-center"> Sunflower </h6>
+                <div className="img-container">
+                  <img src="/seed3.jpg" className="img-fluid rounded"/>
+                </div>
+                <button className="btn btn-success w-100 seeallbtn"> See All Products </button>
+              </div>
+            </div>
+
+            <div className="col-12 col-sm-6 com-md-6 col-lg-4 col-xl-3 mb-3">
+              <div className="p-2">
+              <h6 className="text-center"> Soybean </h6>
+                <div className="img-container">
+                  <img src="/plant4.jpg" className="img-fluid rounded"/>
+                </div>
+                <button className="btn btn-success w-100 seeallbtn"> See All Products </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+        {
+        allcategories.categories.map((category, catindex)=>{
+          return(
+            
+            
+    
+            <div key={catindex} className="container-fluid p-4 mb-5 rounded shadow">
+            <h4 className="mb-3"> {category.name} </h4>
+              <div className="row">
+               { category.subcategories.map((subcategory, subindex)=>{
+                  return(
+                  <div key={subindex} className="col-12 col-sm-6 com-md-6 col-lg-4 col-xl-3 mb-3">
+                  <div className="rounded p-2">
+                    <h6 className="text-center">  </h6>
+                    <div className="img-container">
+                      <img src={subcategory.simage} alt={subcategory.sname} className="img-fluid rounded"/>
+                    </div>
+                    <button className="btn btn-success w-100"> See All Products </button>
+                  </div>
+                </div>
+                )
+                })}
+    
+                
+    
+                
+    
+                
+    
+              </div>
+            </div>
+         
+          )
+        })
+      } 
+
+
+
+
+
+      <div className="container">
+      <div className="row">
+        {allcategories.categories.map((category, categoryIndex) => (
+          <div className="col-12 mb-4" key={categoryIndex}>
+            <h3>{category.name}</h3>
+            {category.subcategories.length > 0 ? (
+              <div className="row">
+                {category.subcategories.map((subcategory, subcategoryIndex) => (
+                  <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={subcategoryIndex}>
+                    <div className="card">
+                      <img src={subcategory.simage} alt={subcategory.sname} className="card-img-top" />
+                      <div className="card-body">
+                        <h5 className="card-title text-center">{subcategory.sname}</h5>
+                        <button className="btn btn-success w-100">See All Products</button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p>No subcategories available.</p>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+
+
+    let[categories, updateCategories] = useState({});
+
+  const getCategories = async() => {
+    let url = "http://localhost:1234/categories";
+
+    await fetch(url)
+    .then(response=>response.json())
+    .then(categorydata=>{
+      updateCategories(categorydata);
+      console.log(categories);
+    })
+  }
+
+  useEffect(()=>{
+    getCategories();
+  },[]);
+
+
+  <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                                <div className="p-3 border">
+                                    <div className="img-container">
+                                        <img src="/tree2.jpg" alt="Product Image" className="img-fluid rounded"/>
+                                    </div>
+                                    <button className="btn btn-danger w-100 seeallbtn"> View Product </button>
+                                    <h5 className="text-center mt-3"> Teak Wood First Grade </h5>
+                                </div>
+                            </div>
+    
+                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                                <div className="p-3 border">
+                                    <div className="img-container">
+                                        <img src="/tree2.jpg" alt="Product Image" className="img-fluid rounded"/>
+                                    </div>
+                                    <button className="btn btn-danger w-100 seeallbtn"> View Product </button>
+                                    <h5 className="text-center mt-3"> Teak Wood First Grade </h5>
+                                </div>
+                            </div>
+    
+                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                                <div className="p-3 border">
+                                    <div className="img-container">
+                                        <img src="/tree2.jpg" alt="Product Image" className="img-fluid rounded"/>
+                                    </div>
+                                    <button className="btn btn-danger w-100 seeallbtn"> View Product </button>
+                                    <h5 className="text-center mt-3"> Teak Wood First Grade </h5>
+                                </div>
+                            </div>
+    
+                            <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                                <div className="p-3 border">
+                                    <div className="img-container">
+                                        <img src="/tree2.jpg" alt="Product Image" className="img-fluid rounded"/>
+                                    </div>
+                                    <button className="btn btn-danger w-100 seeallbtn"> View Product </button>
+                                    <h5 className="text-center mt-3"> Teak Wood First Grade </h5>
+                                </div>
+                            </div>
+
+
+
+
+                            <div className="row">
+                                <div className="col-12 mb-3">
+                                    <img src="/seed1.jpg" className="img-fluid rounded"/>
+                                </div>
+                                <div className="row ps-4">
+                                    <div className="col-3">
+                                    <img src="/seed1.jpg" className="img-fluid rounded"/>
+                                    </div>
+                                    <div className="col-3">
+                                    <img src="/seed1.jpg" className="img-fluid rounded"/>
+                                    </div>
+                                    <div className="col-3">
+                                    <img src="/seed1.jpg" className="img-fluid rounded"/>
+                                    </div>
+                                    <div className="col-3">
+                                    <img src="/seed1.jpg" className="img-fluid rounded"/>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                             ${activeIndices.includes(catIndex) ? '' : 'collapsed'}
+
+                              ${activeIndices.includes(catIndex) ? 'show' : ''}
